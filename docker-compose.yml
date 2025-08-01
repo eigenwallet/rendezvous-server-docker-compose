@@ -12,4 +12,5 @@ services:
     command: >
       sh -c "rendezvous-server --listen-tcp=${RENDEZVOUS_PORT:?} --secret-file=/data/rendezvous_secret --generate-secret || true &&
              rendezvous-server --listen-tcp=${RENDEZVOUS_PORT:?} --secret-file=/data/rendezvous_secret"
-rendezvous-data:
+volumes:
+  rendezvous-data:
