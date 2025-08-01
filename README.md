@@ -1,10 +1,12 @@
-## Rendezvous
+# Rendezvous Server
 
-[Rendezvous points](https://docs.libp2p.io/concepts/discovery-routing/rendezvous/) are used for makers to make themselves discoverable to takers. We need as many of them as possible to make the network redundant.
+[Rendezvous points](https://docs.libp2p.io/concepts/discovery-routing/rendezvous/) are used for [makers](https://github.com/eigenwallet/core/blob/master/dev-docs/asb/README.md#asb-discovery) to make themselves discoverable to takers (users running the eigenwallet).
+
+We need as many of them as possible to make the network redundant.
 
 If you have a small server, you can run a rendezvous point on it. It takes little to no resources.
 
-### Setup
+## How to run
 
 ```bash
 ./setup-rendezvous.sh
