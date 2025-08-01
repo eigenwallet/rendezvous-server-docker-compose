@@ -1,4 +1,3 @@
-version: '2.2'
 services:
   rendezvous:
     build: https://github.com/binarybaron/rendezvous-server.git
