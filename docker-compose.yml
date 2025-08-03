@@ -6,10 +6,10 @@ services:
     volumes:
       - 'rendezvous-data:/data/'
     ports:
-      - '0.0.0.0:${RENDEZVOUS_PORT:?}:${RENDEZVOUS_PORT:?}'
+      - '0.0.0.0:${RENDEZVOUS_PORT:-8888}:${RENDEZVOUS_PORT:-8888}'
     entrypoint: ''
     command: >
-      sh -c "rendezvous-server --listen-tcp=${RENDEZVOUS_PORT:?} --secret-file=/data/rendezvous_secret --generate-secret || true &&
-             rendezvous-server --listen-tcp=${RENDEZVOUS_PORT:?} --secret-file=/data/rendezvous_secret"
+      sh -c "rendezvous-server --listen-tcp=${RENDEZVOUS_PORT:-8888} --secret-file=/data/rendezvous_secret --generate-secret || true &&
+             rendezvous-server --listen-tcp=${RENDEZVOUS_PORT:-8888} --secret-file=/data/rendezvous_secret"
 volumes:
   rendezvous-data:

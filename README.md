@@ -13,3 +13,5 @@ If you have a small server, you can run a rendezvous point on it. It takes littl
 ```
 
 This will guide you through the setup process. You need to expose the port to the public internet (check the `.env` file).
+
+The script will build the rendezvous server from source and run it in the background.
